@@ -1,0 +1,367 @@
+/* ===================================================================
+   THE UNFOLDING — brutalist typewriter aesthetic
+   =================================================================== */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ededea;
+  color: #111;
+  font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+/* Subtle paper grain across the whole app */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 2rem 1.5rem 3rem;
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ====== Header ====== */
+
+.header-block { position: relative; }
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #111;
+  margin: 0.3rem 0;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.meta-row span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(1.4rem, 4.5vw, 2rem);
+  letter-spacing: 0.05em;
+  margin: 0.5rem 0;
+  font-weight: 700;
+  color: #111;
+  text-align: left;
+  line-height: 1;
+}
+
+.back-link {
+  background: none;
+  border: none;
+  color: #111;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  text-transform: uppercase;
+}
+.back-link:hover { color: #c0392b; }
+
+/* ====== Rules ====== */
+
+.rule {
+  height: 0;
+  border-top: 1.5px solid #111;
+  margin: 1rem 0;
+}
+
+.rule.double {
+  border-top: 1.5px solid #111;
+  border-bottom: 1.5px solid #111;
+  height: 4px;
+}
+
+/* ====== Instructions ====== */
+
+.instructions {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+
+.kbd {
+  background: #111;
+  color: #ededea;
+  padding: 1px 6px;
+  font-weight: 700;
+}
+
+.dim { color: #666; }
+
+/* ====== Story body ====== */
+
+main { padding: 0.5rem 0; }
+
+.story {
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: clamp(1rem, 2.6vw, 1.15rem);
+  line-height: 1.85;
+  color: #111;
+  margin: 0;
+  text-align: left;
+  word-spacing: 0.02em;
+}
+
+.grp.expanded {
+  cursor: pointer;
+  background: rgba(255, 235, 100, 0.25);
+  padding: 0 1px;
+  transition: background 0.15s;
+}
+.grp.expanded:hover { background: rgba(255, 200, 50, 0.45); }
+.grp.expanded .grp.expanded { background: rgba(255, 220, 80, 0.3); }
+.grp.expanded .grp.expanded:hover { background: rgba(255, 180, 30, 0.5); }
+
+.grp.collapsed {
+  background: #111;
+  color: #ededea;
+  border: none;
+  font: inherit;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 1px 4px;
+  margin: 0 1px;
+  transition: all 0.1s;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  vertical-align: baseline;
+}
+.grp.collapsed:hover {
+  background: #c0392b;
+  color: #fff;
+}
+.grp.collapsed:active { transform: translate(1px, 1px); }
+
+/* ====== Footer ====== */
+
+footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.ctrl {
+  background: #111;
+  color: #ededea;
+  border: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.ctrl:hover { background: #c0392b; }
+.ctrl:active { transform: translate(1px, 1px); }
+
+.progress-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #111;
+  font-weight: 500;
+}
+
+.bar {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: -0.05em;
+  color: #ccc;
+  line-height: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tick { color: #ccc; transition: color 0.2s; }
+.tick.on { color: #111; }
+
+/* ====== Index cards ====== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.card {
+  background: #f5f4f0;
+  border: 1.5px solid #111;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.1s;
+  position: relative;
+}
+
+.card:hover {
+  background: #111;
+  color: #ededea;
+}
+.card:hover .card-title,
+.card:hover .card-num,
+.card:hover .card-genre,
+.card:hover .card-author,
+.card:hover .card-preview,
+.card:hover .stat-num,
+.card:hover .stat-lbl,
+.card:hover .card-cta {
+  color: inherit;
+}
+.card:hover .stat-cell { border-color: #ededea; }
+.card:active { transform: translate(2px, 2px); }
+
+.card-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: #666;
+  font-weight: 500;
+}
+
+.card-genre {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  background: #111;
+  color: #ededea;
+  padding: 2px 6px;
+  align-self: flex-start;
+  font-weight: 700;
+}
+.card:hover .card-genre {
+  background: #ededea;
+  color: #111;
+}
+
+.card-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0.2rem 0 0;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.card-author {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  font-weight: 500;
+}
+
+.card-preview {
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.4rem 0;
+  font-style: italic;
+  color: #333;
+  border-left: 2px solid #111;
+  padding-left: 0.6rem;
+}
+
+.card-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.stat-cell {
+  text-align: center;
+  padding: 0.3rem 0.2rem;
+  border-right: 1px dotted #111;
+}
+.stat-cell:last-child { border-right: none; }
+
+.stat-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1;
+}
+
+.stat-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  color: #666;
+  margin-top: 0.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.card-cta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  text-align: right;
+  margin-top: 0.3rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #111;
+}
+
+/* ====== Mobile ====== */
+
+@media (max-width: 540px) {
+  footer {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .ctrl { width: 100%; }
+  .card-grid { grid-template-columns: 1fr; }
+  .page { padding: 1.5rem 1rem 2rem; }
+}
