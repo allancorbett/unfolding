@@ -25,6 +25,17 @@ export default function StoryIndex({ onSelect }) {
 
       <div className="rule double" />
 
+      <section className="manifesto">
+        <h2 className="manifesto-title">Progressive disclosure for prose.</h2>
+        <p>
+          Software has long let users start simple and dig in. The Unfolding
+          applies that to stories — each starts as a single sentence and grows
+          outward as you tap. You choose how much story you want.
+        </p>
+      </section>
+
+      <div className="rule" />
+
       <div className="instructions">
         <span>&gt;</span> SELECT A TITLE TO BEGIN
         <span className="dim"> // EACH STORY EXPANDS FROM A SINGLE LINE</span>

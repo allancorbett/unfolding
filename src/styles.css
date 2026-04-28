@@ -354,6 +354,54 @@ footer {
   border-top: 1px solid #111;
 }
 
+/* ====== Manifesto ====== */
+
+.manifesto {
+  margin: 1rem 0;
+}
+
+.manifesto-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+  text-transform: none;
+}
+
+.manifesto p {
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+}
+
+/* ====== Site footer ====== */
+
+.site-footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+.site-footer .meta-row {
+  justify-content: center;
+  gap: 1rem;
+}
+
+.site-footer a {
+  color: #111;
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+.site-footer a:hover { color: #c0392b; }
+
 /* ====== Mobile ====== */
 
 @media (max-width: 540px) {
@@ -364,4 +412,9 @@ footer {
   .ctrl { width: 100%; }
   .card-grid { grid-template-columns: 1fr; }
   .page { padding: 1.5rem 1rem 2rem; }
+  .site-footer { padding: 0 1rem 1.5rem; }
+  .site-footer .meta-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
