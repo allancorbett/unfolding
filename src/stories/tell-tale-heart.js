@@ -12,12 +12,12 @@ export const meta = {
 };
 
 export const tree = [
-  G("man", "A man", [
+  G("man", "A nervous man", [
     T("A "),
-    G("man-adj", "nervous man", [
-      G("nervous", "nervous", [
-        T("dreadfully nervous, though "),
-        G("not-mad", "not mad", [
+    G("man-adj", "very, very dreadfully nervous man", [
+      G("nervous", "very, very dreadfully nervous", [
+        T("very, very dreadfully nervous — though "),
+        G("not-mad", "but by no means mad", [
           T("by no means "),
           G("mad-word", "mad", [
             T("mad — for the disease had only sharpened his senses, never destroyed them"),
@@ -27,8 +27,8 @@ export const tree = [
       T(" man, "),
       G("hearing", "with terrible hearing", [
         T("who heard "),
-        G("all-things", "all things", [
-          T("all things in the heaven and the earth, and many in hell"),
+        G("all-things", "all things in heaven and earth", [
+          T("all things in the heaven and the earth, and many things in hell"),
         ]),
       ]),
     ]),
@@ -41,10 +41,10 @@ export const tree = [
         T("seven long nights of "),
         G("creeping", "creeping into the chamber", [
           T("creeping by midnight into the old man's chamber, "),
-          G("lantern", "with a shuttered lantern", [
+          G("lantern", "with a shuttered dark lantern", [
             T("with a "),
             G("dark-lantern", "dark lantern", [
-              T("dark lantern, all closed, closed, so that no light shone out"),
+              T("dark lantern, all closed, closed, that no light shone out"),
             ]),
             T(", and his head "),
             G("head-in", "thrust slowly in", [
@@ -58,13 +58,13 @@ export const tree = [
     G("how", "to murder", [
       T("to "),
       G("smother", "smother him beneath the bed", [
-        T("drag him to the floor and pull "),
-        G("heavy-bed", "the heavy bed", [T("the heavy wooden bed")]),
+        T("drag him to the floor, and pull "),
+        G("heavy-bed", "the heavy wooden bed", [T("the heavy wooden bed")]),
         T(" over him, "),
         G("smiling", "smiling at the deed", [
-          T("smiling gaily to find "),
+          T("smiling gaily, to find "),
           G("deed-done", "the deed so far done", [
-            T("the deed so far done, though the heart beat on for many minutes"),
+            T("the deed so far done, though the heart beat on for many minutes after"),
           ]),
         ]),
       ]),
@@ -90,7 +90,7 @@ export const tree = [
         T("his eye! Yes, it was this. He had "),
         G("vulture-eye", "the eye of a vulture", [
           T("the eye of a vulture — "),
-          G("pale-blue", "a pale blue eye with a film", [
+          G("pale-blue", "a pale blue eye, with a film over it", [
             T("a pale blue eye, with a film over it"),
           ]),
         ]),
@@ -98,37 +98,37 @@ export const tree = [
         G("blood-ran-cold", "it made his blood run cold", [
           T("whenever it fell upon him, "),
           G("cold-blood", "his blood ran cold", [
-            T("his blood ran cold — and so by degrees, very gradually, he made up his mind to take the life of the old man, and thus rid himself of the eye forever"),
+            T("his blood ran cold — and so by degrees, very gradually, he made up his mind to take the life of the old man, and thus rid himself of the eye for ever"),
           ]),
         ]),
       ]),
     ]),
   ]),
   T(" "),
-  G("then", "and then", [
+  G("then", "and then,", [
     T(" Afterwards, he "),
     G("dismembered", "dismembered the corpse", [
       T("dismembered the corpse with "),
-      G("cautious", "cautious silence", [
+      G("cautious", "every cautious silence", [
         T("wise precautions — "),
-        G("cut", "he cut off the head and the arms and the legs", [
-          T("he cut off the head and the arms and the legs, "),
+        G("cut", "cut off the head and the arms and the legs", [
+          T("he cut off the head, and the arms, and the legs, "),
           G("planks", "took up three planks from the flooring", [
             T("then took up three planks from the flooring of the chamber, "),
-            G("hidden", "and deposited all between the scantlings", [
-              T("and deposited all between the scantlings, replacing the boards so cleverly that no human eye could detect anything wrong"),
+            G("hidden", "and laid all between the scantlings", [
+              T("and deposited all between the scantlings, replacing the boards so cleverly that no human eye could have detected anything wrong"),
             ]),
           ]),
         ]),
       ]),
     ]),
     T(", and when "),
-    G("police", "the police arrived", [
+    G("police", "the police came knocking,", [
       T("three police officers arrived "),
       G("shriek", "summoned by a neighbour's report of a shriek", [
         T("at four in the morning, "),
         G("neighbour", "a neighbour having heard a shriek in the night", [
-          T("a neighbour having heard a shriek in the night and lodged information at the station"),
+          T("a neighbour having heard a shriek in the night, and lodged information at the station"),
         ]),
       ]),
       T(", he "),
@@ -139,7 +139,7 @@ export const tree = [
         ]),
       ]),
       T(", "),
-      G("seated", "seating them in the very room", [
+      G("seated", "and seated them in the very room", [
         T("seating them in the "),
         G("very-spot", "very spot beneath which the body lay", [
           T("very spot beneath which reposed the corpse of the victim"),
@@ -148,11 +148,11 @@ export const tree = [
     ]),
   ]),
   T(" "),
-  G("confesses", "and confesses.", [
-    T(", but soon a "),
+  G("confesses", "he confesses.", [
+    T(", soon a "),
     G("ringing", "low ringing began in his ears", [
       T("low, dull, quick sound began in his ears — "),
-      G("watch", "such as a watch makes when enveloped in cotton", [
+      G("watch", "such as a watch makes when wrapped in cotton", [
         T("such a sound as a watch makes when enveloped in cotton"),
       ]),
     ]),
@@ -163,7 +163,7 @@ export const tree = [
         T("louder — louder — louder! And still the men chatted pleasantly and smiled"),
       ]),
     ]),
-    T(" until, "),
+    T(", until, "),
     G("certain", "certain it was the dead man's heart", [
       T("certain that it was "),
       G("hideous-heart", "the beating of the hideous heart", [
@@ -173,7 +173,7 @@ export const tree = [
     T(", he "),
     G("shrieked", "shrieked his confession", [
       T("could bear it no longer and "),
-      G("words", "tore up the planks", [
+      G("words", "shrieked, and tore up the planks", [
         T("shrieked — "),
         G("villains", "'Villains!' he cried, 'dissemble no more!'", [
           T("'Villains!' he shrieked, 'dissemble no more! I admit the deed! — tear up the planks! — here, here! — it is the beating of his hideous heart!'"),

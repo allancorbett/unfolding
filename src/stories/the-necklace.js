@@ -18,9 +18,9 @@ export const tree = [
       G("clerk", "minor clerk in the Ministry of Education", [
         T("minor clerk in the Ministry of Education, "),
         G("yearned", "who yearned for finer things", [
-          T("who yearned ceaselessly for "),
-          G("finer", "silks, jewels, and elegant suppers", [
-            T("silks and jewels, dim drawing rooms hung with old tapestries, and elegant suppers in lamplight"),
+          T("who yearned, ceaselessly, for "),
+          G("finer", "silks, jewels, and elegant suppers in lamplight", [
+            T("silks and jewels, dim drawing-rooms hung with old tapestries, and elegant suppers in lamplight"),
           ]),
         ]),
       ]),
@@ -28,7 +28,7 @@ export const tree = [
   ]),
   T(" "),
   G("borrows", "borrows a necklace", [
-    T("was "),
+    T(" was "),
     G("invited", "invited with her husband to a grand ball", [
       T("invited with her husband to a "),
       G("ball", "grand ball at the Ministry", [
@@ -57,14 +57,14 @@ export const tree = [
     ]),
     T(", but on returning home in the small hours she "),
     G("looked", "looked into the glass to admire herself", [
-      T("looked into the glass to admire herself one final time and "),
+      T("looked into the glass to admire herself one final time, and "),
       G("found-gone", "found the necklace gone from her throat", [
         T("found the necklace gone — clean gone, no clasp, no chain, no diamond left at all"),
       ]),
     ]),
   ]),
   T(" "),
-  G("replaces", "secretly replaces it,", [
+  G("replaces", "replaces it in secret,", [
     T(". They searched the cab company, the streets, the gutters between the Ministry and home, and "),
     G("found-nothing", "found nothing", [
       T("found nothing, "),
@@ -81,21 +81,21 @@ export const tree = [
       T(" to "),
       G("bought", "buy a replacement diamond necklace", [
         T("buy an identical necklace from a jeweller in the Palais-Royal, "),
-        G("returned", "and returned it without a word", [
-          T("which they returned to Madame Forestier in its case without a word of explanation"),
+        G("returned", "and returned it without a word of explanation", [
+          T("which they returned to Madame Forestier in its case, without a word of explanation"),
         ]),
       ]),
     ]),
   ]),
   T(" "),
-  G("pays", "and pays for ten years.", [
+  G("pays", "and pays for ten long years.", [
     T(". Then began the "),
     G("ten-years", "ten long years of poverty", [
       T("ten long years of poverty, "),
       G("she-worked", "in which she scrubbed and bargained and aged", [
         T("in which she dismissed the maid, took a garret under the roof, "),
-        G("scrubbing", "scrubbed the floors and carried the slops down each morning", [
-          T("scrubbed the greasy pots, washed the dirty linen on her own knuckles, and carried the slops down to the street each morning"),
+        G("scrubbing", "scrubbed the pots, washed the linen, carried the slops down each morning", [
+          T("scrubbed the greasy pots, washed the dirty linen with her own knuckles, and carried the slops down to the street each morning"),
         ]),
       ]),
     ]),
@@ -103,7 +103,7 @@ export const tree = [
     G("now-old", "hard, coarse, raw-boned woman", [
       T("hard, coarse, raw-boned woman of the working-poor, "),
       G("hair-rough", "with rough hair and red hands", [
-        T("with rough hair and red hands and a loud voice that splashed water about when she washed"),
+        T("with rough hair and red hands, and a loud voice that splashed water about when she washed"),
       ]),
     ]),
     T(". Walking on the Champs-Élysées one Sunday she "),
@@ -116,8 +116,8 @@ export const tree = [
     T(", at which Madame Forestier seized her hands and cried, "),
     G("paste", "'Oh, my poor Mathilde — they were paste!'", [
       T("'Oh, my poor Mathilde! Mine were "),
-      G("worth-nothing", "false! Worth, at most, five hundred francs!", [
-        T("false. They were worth, at most, five hundred francs!'"),
+      G("worth-nothing", "false! Worth, at most, five hundred francs.", [
+        T("false. They were worth, at most, five hundred francs.'"),
       ]),
     ]),
   ]),
