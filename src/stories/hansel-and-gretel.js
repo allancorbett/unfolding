@@ -17,21 +17,21 @@ export const tree = [
       T("children, "),
       G("brother-sister", "a brother and sister called Hansel and Gretel", [
         T("a brother and sister called Hansel and Gretel, "),
-        G("woodcutter", "the children of a poor woodcutter", [
-          T("the children of a poor woodcutter and his cold-hearted second wife, who had not bread enough in the house for four mouths"),
+        G("woodcutter", "the children of a starving woodcutter", [
+          T("the children of a poor woodcutter and his cold-hearted second wife, who had no longer bread enough in the house for four mouths"),
         ]),
       ]),
     ]),
   ]),
   T(" "),
-  G("abandoned", "are left in the woods", [
-    T("are taken at dawn "),
+  G("abandoned", "are abandoned in the woods", [
+    T(" are taken at dawn "),
     G("deep-into", "deep into the great forest", [
       T("deep into the great forest by their parents, "),
       G("on-pretext", "on the pretext of cutting wood", [
         T("on the pretext of cutting wood, "),
-        G("really", "and there abandoned to die", [
-          T("and there abandoned beside a small fire to die, the stepmother having so insisted to save what little food remained"),
+        G("really", "and there left to die beside a small fire", [
+          T("and there abandoned beside a small fire, the stepmother having so insisted, to save what little food remained"),
         ]),
       ]),
     ]),
@@ -48,10 +48,10 @@ export const tree = [
         ]),
       ]),
     ]),
-    T(", so the children wandered "),
+    T(", and so the children wandered "),
     G("three-days", "three days and three nights", [
       T("three days and three nights through the wood, "),
-      G("hungry", "starving and weeping by turns", [
+      G("hungry", "weak with hunger and weeping by turns", [
         T("growing weak with hunger and weeping by turns, sleeping under hedges and drinking from cold streams"),
       ]),
     ]),
@@ -59,20 +59,20 @@ export const tree = [
   T(" "),
   G("witch-house", "find a house of cake,", [
     T(", until at last they came upon a "),
-    G("little-house", "little house in a clearing", [
-      T("strange little house standing all alone in a sunlit clearing, "),
-      G("made-of", "made of bread and cake", [
-        T("the walls "),
-        G("walls", "walls of gingerbread and the roof of cake", [
-          T("walls of fragrant gingerbread, the roof of sweet cake, "),
-          G("windows", "and the windows of clear sugar", [
-            T("and the windows panes of clear spun sugar that glittered in the sun"),
+    G("little-house", "little house standing alone in a sunlit clearing", [
+      T("strange little house standing alone in a sunlit clearing, "),
+      G("made-of", "made all of bread and sweets", [
+        T("with "),
+        G("walls", "walls of fragrant gingerbread and a roof of cake", [
+          T("walls of fragrant gingerbread and a roof of sweet cake, "),
+          G("windows", "and windowpanes of clear sugar", [
+            T("and windowpanes of clear spun sugar that glittered in the sun"),
           ]),
         ]),
       ]),
     ]),
     T(", from which the famished children "),
-    G("ate-roof", "broke off pieces and ate", [
+    G("ate-roof", "broke off pieces and ate hungrily", [
       T("broke off great pieces and ate hungrily, scarcely able to believe their fortune"),
     ]),
   ]),
@@ -80,33 +80,33 @@ export const tree = [
   G("meet-witch", "and meet a witch.", [
     T(". But the door creaked open, and out hobbled an "),
     G("old-woman", "old, old woman with red eyes", [
-      T("old, old woman leaning on a crutch, "),
-      G("red-eyes", "with red eyes and a long nose", [
-        T("with red eyes that could not see far but could smell little children a mile off, "),
+      T("old, old woman, leaning on a crutch, "),
+      G("red-eyes", "with red eyes that could not see far", [
+        T("with red eyes that could not see far, but could smell little children a mile off, "),
         G("really-witch", "for she was a wicked witch in disguise", [
-          T("for she was in truth a wicked witch who had built her cottage of cakes to lure children to her oven"),
+          T("for she was in truth a wicked witch, who had built her cottage of cakes to lure children to her oven"),
         ]),
       ]),
     ]),
     T(". She "),
-    G("locked-hansel", "locked Hansel in a cage to fatten him", [
-      T("locked Hansel in an iron cage in the yard "),
-      G("fatten", "and fed him sweetmeats to fatten him", [
+    G("locked-hansel", "locked Hansel in an iron cage", [
+      T("locked Hansel in an iron cage in the yard, "),
+      G("fatten", "and fed him sweetmeats to fatten him for the pot", [
         T("and fed him sweetmeats every day to fatten him for the pot, "),
-        G("gretel-slave", "while Gretel was made to scrub and cook", [
+        G("gretel-slave", "while Gretel was set to scrub and cook", [
           T("while Gretel was set to scrub the floors and cook the meals from before dawn until long after dark"),
         ]),
       ]),
     ]),
-    T(". When at last the witch lit the great oven and bid Gretel "),
-    G("test", "look in to see if it was hot", [
+    T(". When at last the witch lit the great oven, and bid Gretel "),
+    G("test", "creep inside to test the heat", [
       T("creep inside to see if it was hot enough for the baking, "),
       G("pushed-in", "Gretel pretended she could not fit", [
         T("Gretel pretended she could not fit, "),
-        G("witch-in", "and when the witch leaned in to show her", [
+        G("witch-in", "and when the witch leaned in to show her how", [
           T("and when the witch leaned impatiently into the oven to show her how, "),
-          G("shoved", "Gretel gave a great shove and slammed the iron door", [
-            T("Gretel gave her a great shove from behind and slammed the iron door fast upon her, leaving her to burn to a cinder within"),
+          G("shoved", "Gretel shoved her in and slammed the iron door", [
+            T("Gretel gave her a great shove from behind, and slammed the iron door fast upon her, leaving her to burn to a cinder within"),
           ]),
         ]),
       ]),

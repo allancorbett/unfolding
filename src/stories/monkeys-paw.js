@@ -15,10 +15,10 @@ export const tree = [
     T("An "),
     G("old-white", "old Mr White", [
       T("old "),
-      G("father", "father in a quiet country parlour", [
+      G("father", "father at chess in a quiet country parlour", [
         T("father, sitting at chess with his son Herbert in a quiet country parlour, "),
-        G("rain", "while the rain beat upon the windows", [
-          T("while the rain beat upon the windows and the wind howled in the chimney without"),
+        G("rain", "while the rain beat at the windows", [
+          T("while the rain beat at the windows and the wind howled in the chimney without"),
         ]),
       ]),
     ]),
@@ -28,8 +28,8 @@ export const tree = [
     T(", visited that night by his old friend "),
     G("morris", "Sergeant-Major Morris", [
       T("Sergeant-Major Morris, "),
-      G("home-from-india", "lately returned from twenty-one years in India", [
-        T("lately returned from twenty-one years' service in India, full of strange tales of fakirs and jungle"),
+      G("home-from-india", "lately home from twenty-one years in India", [
+        T("lately home from twenty-one years' service in India, full of strange tales of fakirs and jungle"),
       ]),
     ]),
     T(", who drew from his pocket a "),
@@ -37,9 +37,9 @@ export const tree = [
       T("shrivelled little paw, "),
       G("mummified", "mummified to the colour of old leather", [
         T("mummified to the colour of old leather, "),
-        G("spell", "on which a fakir had set a spell", [
+        G("spell", "on which a holy fakir had set a spell", [
           T("on which a holy fakir had set a spell — "),
-          G("three-wishes", "to grant three wishes to three men", [
+          G("three-wishes", "three wishes for each of three men", [
             T("that three separate men might have three wishes from it, to show that fate ruled people's lives, and that those who interfered with it did so to their sorrow"),
           ]),
         ]),
@@ -52,7 +52,7 @@ export const tree = [
     G("first-wish", "and wished for two hundred pounds", [
       T("and laughingly wished for "),
       G("pay-mortgage", "two hundred pounds to clear the mortgage", [
-        T("two hundred pounds — just enough to clear the mortgage on the house and leave a little besides"),
+        T("two hundred pounds — just enough to clear the mortgage on the house, and leave a little over"),
       ]),
       T(", at which the paw "),
       G("twisted", "twisted in his hand like a snake", [
@@ -63,7 +63,7 @@ export const tree = [
     G("stranger", "grave stranger came to the door", [
       T("grave stranger from "),
       G("maw-meggins", "Maw and Meggins, the works", [
-        T("Maw and Meggins, where Herbert had been employed, "),
+        T("Maw and Meggins, the works where Herbert had been employed, "),
         G("compensation", "to offer compensation for his death in the machinery", [
           T("to express the firm's deep regret at Herbert's death — caught in the machinery — and to offer, by way of compensation, the sum of two hundred pounds"),
         ]),
@@ -95,9 +95,9 @@ export const tree = [
     ]),
     T(". As his wife flew at the bolt to let in whatever stood without, the old man "),
     G("third-wish", "found the paw and made the third wish", [
-      T("groped frantically on the floor for the paw, found it, and "),
+      T("groped frantically along the floor for the paw, found it, and "),
       G("breathed", "breathed his last wish", [
-        T("breathed his third and last wish quickly, in a hoarse whisper"),
+        T("breathed his third and final wish, quickly, in a hoarse whisper"),
       ]),
     ]),
     T(". The knocking ceased at once. When the door swung open, the "),

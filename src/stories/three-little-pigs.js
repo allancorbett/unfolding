@@ -17,15 +17,15 @@ export const tree = [
       T("little pigs, "),
       G("set-out", "having grown up and left their mother", [
         T("having grown up and left their mother to "),
-        G("seek-fortune", "seek their fortune in the world", [
+        G("seek-fortune", "seek their fortune in the wide world", [
           T("seek their fortune out in the wide world"),
         ]),
       ]),
     ]),
   ]),
   T(" "),
-  G("build", "build houses", [
-    T("each set about "),
+  G("build", "each build a house", [
+    T(", each set about "),
     G("building", "building a house to live in", [
       T("building a house in which to live: "),
       G("first", "the first of straw", [
@@ -49,14 +49,14 @@ export const tree = [
         G("sticks", "twigs and branches", [
           T("twigs and branches "),
           G("from-wood", "gathered hastily from the wood", [
-            T("gathered hastily from the wood, lashed together with vine"),
+            T("gathered hastily from the wood, and lashed together with vine"),
           ]),
         ]),
       ]),
       T("; and "),
       G("third", "the third of bricks", [
         T("the "),
-        G("third-pig", "third pig, who was wise", [
+        G("third-pig", "third pig, who was wise and patient", [
           T("third pig, who was wise and patient"),
         ]),
         T(", "),
@@ -70,8 +70,8 @@ export const tree = [
     ]),
   ]),
   T(" "),
-  G("wolf", "A wolf", [
-    T("Then a "),
+  G("wolf", "A great wolf", [
+    T(" Then a "),
     G("big-wolf", "great hungry wolf", [
       T("great hungry "),
       G("grey-wolf", "grey wolf with yellow teeth", [
@@ -85,12 +85,12 @@ export const tree = [
     G("prowling", "prowling through the country", [
       T("prowling through the country, "),
       G("scenting", "scenting pork upon the wind", [
-        T("scenting pork upon the wind and licking his chops"),
+        T("scenting pork upon the wind, and licking his chops"),
       ]),
     ]),
   ]),
   T(" "),
-  G("attacks", "attacks each one.", [
+  G("attacks", "attacks each in turn.", [
     T(" and came in turn to each little house. At the first he called out: "),
     G("call-1", "'Little pig, let me in!'", [
       G("knock-1", "'Little pig, little pig, let me come in!'", [
@@ -102,11 +102,11 @@ export const tree = [
     ]),
     T(" So the wolf "),
     G("blew-1", "blew the straw house down", [
-      T("huffed and he puffed and he "),
+      T("huffed and he puffed, and "),
       G("blew-down-1", "blew the house of straw clean down", [
         T("blew the house of straw clean down, and "),
         G("ate-1", "swallowed the first pig whole", [
-          T("swallowed the first little pig in a single gulp"),
+          T("swallowed the first little pig at a single gulp"),
         ]),
       ]),
     ]),
@@ -122,7 +122,7 @@ export const tree = [
     ]),
     T(". But at the brick house "),
     G("brick-resists", "his huffing did nothing", [
-      T("he huffed and puffed and huffed and puffed, "),
+      T("he huffed and puffed, and huffed and puffed, "),
       G("no-budge", "and the bricks did not budge", [
         T("and the bricks did not budge so much as a finger's breadth"),
       ]),
@@ -130,10 +130,10 @@ export const tree = [
     T(", so he climbed onto the roof and "),
     G("chimney", "tried the chimney", [
       T("tried to come down the chimney — but the third pig "),
-      G("pot", "had set a great pot on the fire", [
-        T("had set a great cauldron of boiling water on the hearth, "),
-        G("wolf-fell", "and the wolf fell straight in", [
-          T("and the wolf fell straight in with a tremendous splash, and was never heard from again"),
+      G("pot", "had set a great pot upon the fire", [
+        T("had set a great cauldron of boiling water upon the hearth, "),
+        G("wolf-fell", "and the wolf dropped straight in", [
+          T("and the wolf dropped straight in with a tremendous splash, and was never heard from again"),
         ]),
       ]),
     ]),

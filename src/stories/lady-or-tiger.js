@@ -15,10 +15,10 @@ export const tree = [
     T("A "),
     G("semi-barbaric", "semi-barbaric king of antiquity", [
       T("semi-barbaric king of antiquity, "),
-      G("fancy", "of florid fancy and untrammelled authority", [
-        T("a man of florid fancy and untrammelled authority, "),
-        G("self-pleasing", "given to schemes that pleased only himself", [
-          T("given to schemes whose only purpose was to make crooked things straight and to please himself"),
+      G("fancy", "of florid fancy and unfettered authority", [
+        T("a man of florid fancy and unfettered authority, "),
+        G("self-pleasing", "with a taste for spectacle that pleased only himself", [
+          T("given to schemes whose only purpose was to make crooked things straight, and to please himself"),
         ]),
       ]),
     ]),
@@ -28,7 +28,7 @@ export const tree = [
     T(" had built a "),
     G("amphitheatre", "vast public amphitheatre", [
       T("vast public amphitheatre "),
-      G("encircled", "encircled by galleries and shaded by canopies", [
+      G("encircled", "encircled by galleries and shaded by silken canopies", [
         T("encircled by galleries and shaded by silken canopies, "),
         G("for-justice", "where his subjects were tried by chance", [
           T("where any man accused of a crime sufficiently important to interest the king was tried by the impartial verdict of chance"),
@@ -41,10 +41,10 @@ export const tree = [
       G("doors-mean", "behind one a tiger, behind the other a lady", [
         T("behind one of which crouched the "),
         G("fiercest-tiger", "fiercest tiger that could be procured", [
-          T("fiercest and most cruel tiger that could be procured to tear the offender to pieces"),
+          T("fiercest and most cruel tiger that could be procured, to tear the offender to pieces"),
         ]),
         T(", and behind the other a "),
-        G("loveliest-lady", "loveliest lady of suitable age", [
+        G("loveliest-lady", "lovely lady of suitable age", [
           T("loveliest lady of suitable age, to whom he was instantly married before the assembled multitude, regardless of any wife or sweetheart he might already have"),
         ]),
       ]),
@@ -57,8 +57,8 @@ export const tree = [
       T("a princess as beautiful and as semi-barbaric as her father, "),
       G("loved", "had taken a lover beneath her station", [
         T("had taken a lover, "),
-        G("youth-courtier", "a courtier of low birth but exceeding handsome", [
-          T("a courtier of low birth but exceeding handsome and brave, the kind of youth a princess might love"),
+        G("youth-courtier", "a courtier of low birth but exceedingly handsome", [
+          T("a courtier of low birth but exceedingly handsome and brave, the kind of youth a princess might love"),
         ]),
       ]),
     ]),
@@ -67,8 +67,8 @@ export const tree = [
   G("loves", "lady", [
     T(", and when the affair was discovered, the king "),
     G("flung", "flung the youth into prison and set the day", [
-      T("flung the youth into prison at once and set the day for his trial in the arena, "),
-      G("crowds", "and the crowds gathered to watch", [
+      T("flung the youth into prison at once, and set the day for his trial in the arena, "),
+      G("crowds", "and the crowds came pouring in to watch", [
         T("and the crowds came pouring in from far and near to watch as they had never watched before, the lover of a princess being a rare occasion"),
       ]),
     ]),
@@ -77,7 +77,7 @@ export const tree = [
   G("riddle", "or tiger?", [
     T(". The princess, by means known only to one of her birth and station, had "),
     G("learned-secret", "learned which door held which", [
-      T("learned which door concealed the tiger and which the lady, "),
+      T("learned which door concealed the tiger, and which the lady, "),
       G("knew-lady", "and she knew the lady well", [
         T("and she knew the lady well — a fair courtier of her own household, on whom her lover had once dared to look with admiration"),
       ]),
@@ -85,7 +85,7 @@ export const tree = [
     T(". On the day of the trial, when the youth came forth into the arena and lifted his eyes to her seat, she "),
     G("signal", "made a slight, quick movement of her hand to the right", [
       T("made a slight, quick movement of her hand to the right — "),
-      G("understood", "and he understood at once and went without hesitation to the right-hand door", [
+      G("understood", "and he understood at once, and went without hesitation to the right-hand door", [
         T("and he, understanding at once with the perfect understanding of lovers, went without an instant's hesitation across the sand to the right-hand door"),
       ]),
     ]),
