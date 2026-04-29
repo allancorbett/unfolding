@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import StoryIndex from "./components/StoryIndex.jsx";
 import StoryView from "./components/StoryView.jsx";
+import DonQuixoteView from "./components/DonQuixoteView.jsx";
 import { getStoryById } from "./lib/stories.js";
 
 function getRouteFromHash() {
@@ -31,7 +32,9 @@ export default function App() {
   }, []);
 
   let view;
-  if (route) {
+  if (route === "don-quixote") {
+    view = <DonQuixoteView onBack={navigateHome} />;
+  } else if (route) {
     const story = getStoryById(route);
     if (story) {
       // Re-key on route so each story view gets a fresh state

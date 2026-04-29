@@ -402,6 +402,116 @@ footer {
 }
 .site-footer a:hover { color: #c0392b; }
 
+/* ====== Don Quixote view ====== */
+
+.dq-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  padding: 2rem 0;
+  margin: 0;
+}
+.dq-error { color: #c0392b; }
+.dq-url {
+  display: block;
+  margin-top: 0.5rem;
+  color: #999;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  word-break: break-all;
+  text-transform: none;
+}
+
+.dq-part-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.6rem 0.75rem;
+  background: #111;
+  color: #ededea;
+}
+
+.dq-chapter-list {
+  border: 1.5px solid #111;
+  border-top: none;
+  margin-bottom: 1.5rem;
+}
+
+.dq-chapter { border-bottom: 1px dotted #bbb; }
+.dq-chapter:last-child { border-bottom: none; }
+
+.dq-chapter-btn {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: #111;
+  text-align: left;
+  transition: background 0.1s;
+}
+.dq-chapter-btn:hover { background: #111; color: #ededea; }
+.dq-chapter-btn:active { transform: translate(1px, 1px); }
+
+.dq-ch-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  min-width: 2rem;
+  color: #666;
+  flex-shrink: 0;
+  padding-top: 0.1em;
+}
+.dq-chapter-btn:hover .dq-ch-num { color: #ededea; }
+
+.dq-ch-subtitle {
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  flex: 1;
+  text-transform: none;
+}
+
+.dq-ch-caret {
+  font-size: 0.55rem;
+  flex-shrink: 0;
+  color: #aaa;
+  padding-top: 0.1em;
+}
+.dq-chapter-btn:hover .dq-ch-caret { color: #ededea; }
+
+.dq-chapter-body {
+  padding: 1rem 0.75rem 1.25rem 3.5rem;
+  border-top: 1px solid #ddd;
+  background: #f5f4f0;
+}
+.dq-chapter-body p {
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin: 0 0 0.9em;
+  color: #111;
+}
+.dq-chapter-body p:last-child { margin-bottom: 0; }
+
+.dq-source {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  padding: 0.75rem 0 0.25rem;
+}
+
 /* ====== Mobile ====== */
 
 @media (max-width: 540px) {

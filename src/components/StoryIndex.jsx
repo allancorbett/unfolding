@@ -82,6 +82,40 @@ export default function StoryIndex({ onSelect }) {
         })}
       </div>
 
+      <div className="rule" />
+
+      <div className="instructions">
+        <span>&gt;</span> LONG FORM
+        <span className="dim"> // FULL NOVELS — TEXT FETCHED FROM PROJECT GUTENBERG</span>
+      </div>
+
+      <div className="rule" />
+
+      <div className="card-grid">
+        <button className="card dq-index-card" onClick={() => onSelect("don-quixote")}>
+          <div className="card-num">NOVEL</div>
+          <div className="card-genre">SATIRE / ADVENTURE</div>
+          <h2 className="card-title">Don Quixote</h2>
+          <div className="card-author">Miguel de Cervantes · 1605–1615</div>
+          <div className="card-preview">"In a village of La Mancha, the name of which I have no desire to call to mind…"</div>
+          <div className="card-stats">
+            <div className="stat-cell">
+              <div className="stat-num">2</div>
+              <div className="stat-lbl">PARTS</div>
+            </div>
+            <div className="stat-cell">
+              <div className="stat-num">126</div>
+              <div className="stat-lbl">CHAPTERS</div>
+            </div>
+            <div className="stat-cell">
+              <div className="stat-num">430k</div>
+              <div className="stat-lbl">WORDS</div>
+            </div>
+          </div>
+          <div className="card-cta">[ OPEN BOOK ]</div>
+        </button>
+      </div>
+
       <div className="rule double" />
     </div>
   );
