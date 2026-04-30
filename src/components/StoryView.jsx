@@ -6,6 +6,7 @@ import {
   countGroups,
   wordCount,
 } from "../lib/nodes.js";
+import { getBookForChapter } from "../lib/books.js";
 
 function renderNodes(nodes, onToggle) {
   const out = [];
@@ -47,7 +48,7 @@ function renderNodes(nodes, onToggle) {
   return out;
 }
 
-export default function StoryView({ story, onBack }) {
+export default function StoryView({ story, onBack, onNavigate, onNavigateBook }) {
   const [tree, setTree] = useState(story.tree);
 
   const handleToggle = useCallback((id, value) => {
@@ -58,15 +59,43 @@ export default function StoryView({ story, onBack }) {
   const wc = useMemo(() => wordCount(collectText(tree)), [tree]);
   const pct = stats.total ? Math.round((stats.expanded / stats.total) * 100) : 0;
 
+  const chapterCtx = story.meta.book
+    ? getBookForChapter(story.meta.id)
+    : null;
+  const isChapter = !!chapterCtx;
+  const prevChapter = isChapter && chapterCtx.index > 0
+    ? chapterCtx.book.chapters[chapterCtx.index - 1]
+    : null;
+  const nextChapter = isChapter && chapterCtx.index < chapterCtx.book.chapters.length - 1
+    ? chapterCtx.book.chapters[chapterCtx.index + 1]
+    : null;
+
+  const handleBack = () => {
+    if (isChapter && onNavigateBook) {
+      onNavigateBook(chapterCtx.book.id);
+    } else {
+      onBack();
+    }
+  };
+
   return (
     <div className="page">
       <div className="header-block">
         <div className="meta-row">
-          <button className="back-link" onClick={onBack}>
-            ← INDEX
+          <button className="back-link" onClick={handleBack}>
+            {isChapter
+              ? "← " + chapterCtx.book.title.toUpperCase()
+              : "← INDEX"}
           </button>
           <span>{story.meta.id.toUpperCase()}.TXT</span>
-          <span>REV. {String(stats.expanded).padStart(2, "0")}</span>
+          {isChapter ? (
+            <span>
+              CH {String(chapterCtx.index + 1).padStart(2, "0")}/
+              {String(chapterCtx.book.chapters.length).padStart(2, "0")}
+            </span>
+          ) : (
+            <span>REV. {String(stats.expanded).padStart(2, "0")}</span>
+          )}
         </div>
         <h1>{story.meta.title.toUpperCase()}</h1>
         <div className="meta-row">
@@ -123,6 +152,34 @@ export default function StoryView({ story, onBack }) {
           [REVEAL ALL]
         </button>
       </footer>
+
+      {isChapter && (
+        <>
+          <div className="rule" />
+          <nav className="chapter-nav">
+            <button
+              className="chapter-nav-btn"
+              onClick={() => prevChapter && onNavigate(prevChapter.meta.id)}
+              disabled={!prevChapter}
+            >
+              [← PREV]
+            </button>
+            <button
+              className="chapter-nav-btn"
+              onClick={() => onNavigateBook(chapterCtx.book.id)}
+            >
+              [CONTENTS]
+            </button>
+            <button
+              className="chapter-nav-btn"
+              onClick={() => nextChapter && onNavigate(nextChapter.meta.id)}
+              disabled={!nextChapter}
+            >
+              [NEXT →]
+            </button>
+          </nav>
+        </>
+      )}
 
       <div className="rule double" />
     </div>

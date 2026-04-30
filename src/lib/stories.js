@@ -1,8 +1,12 @@
 // Add new stories here. Each module must export { meta, tree }.
-// To add a new story:
+// To add a new standalone story:
 //   1. Create src/stories/your-story.js (export { meta, tree })
 //   2. Import it below
-//   3. Add it to the `stories` array
+//   3. Add it to the `standalone` array
+//
+// Chapter-stories belonging to a book are registered in ./books.js — they
+// are spread into `stories` automatically so existing routing and
+// `getStoryById` lookups keep working.
 
 import * as tellTaleHeart from "../stories/tell-tale-heart.js";
 import * as threeLittlePigs from "../stories/three-little-pigs.js";
@@ -17,7 +21,9 @@ import * as theOpenWindow from "../stories/the-open-window.js";
 import * as ladyOrTiger from "../stories/lady-or-tiger.js";
 import * as bluebeard from "../stories/bluebeard.js";
 
-export const stories = [
+import { books } from "./books.js";
+
+export const standalone = [
   tellTaleHeart,
   threeLittlePigs,
   redRidingHood,
@@ -30,6 +36,11 @@ export const stories = [
   theOpenWindow,
   ladyOrTiger,
   bluebeard,
+];
+
+export const stories = [
+  ...standalone,
+  ...books.flatMap((b) => b.chapters),
 ];
 
 export function getStoryById(id) {
