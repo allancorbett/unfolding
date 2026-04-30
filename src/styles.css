@@ -354,6 +354,137 @@ footer {
   border-top: 1px solid #111;
 }
 
+/* ====== Book card variant ====== */
+
+.card.book {
+  border-width: 3px;
+  background: #ededea;
+  position: relative;
+}
+.card.book::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid #111;
+  pointer-events: none;
+}
+.card.book:hover::before { border-color: #ededea; }
+.card.book .card-genre {
+  background: #c0392b;
+  color: #fff;
+}
+.card:hover.book .card-genre {
+  background: #ededea;
+  color: #111;
+}
+
+/* ====== Book page (BookView) ====== */
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #111;
+}
+
+.chapter-list li {
+  border-bottom: 1px solid #111;
+}
+
+.chapter-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: baseline;
+  gap: 1rem;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0.85rem 0.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  color: #111;
+  text-align: left;
+  transition: all 0.1s;
+}
+.chapter-row:hover {
+  background: #111;
+  color: #ededea;
+}
+.chapter-row:hover .dim { color: #888; }
+.chapter-row:active { transform: translate(1px, 1px); }
+
+.chapter-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #666;
+  white-space: nowrap;
+}
+.chapter-row:hover .chapter-num { color: #ededea; }
+
+.chapter-title {
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.chapter-stats {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  white-space: nowrap;
+}
+.chapter-row:hover .chapter-stats { color: #ededea; }
+
+.chapter-cta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.book-footer {
+  margin: 0.5rem 0;
+}
+
+/* ====== Chapter nav (StoryView footer) ====== */
+
+.chapter-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.chapter-nav-btn {
+  background: #ededea;
+  color: #111;
+  border: 1.5px solid #111;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  padding: 0.6rem 0.4rem;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.chapter-nav-btn:not(:disabled):hover {
+  background: #111;
+  color: #ededea;
+}
+.chapter-nav-btn:not(:disabled):active { transform: translate(1px, 1px); }
+.chapter-nav-btn:disabled {
+  color: #aaa;
+  border-color: #aaa;
+  cursor: not-allowed;
+}
+
 /* ====== Manifesto ====== */
 
 .manifesto {
@@ -411,6 +542,17 @@ footer {
   }
   .ctrl { width: 100%; }
   .card-grid { grid-template-columns: 1fr; }
+  .chapter-row {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 0.25rem;
+    column-gap: 0.75rem;
+  }
+  .chapter-title { grid-column: 2; }
+  .chapter-stats { grid-column: 1 / -1; }
+  .chapter-cta { grid-column: 1 / -1; text-align: right; }
+  .chapter-nav { grid-template-columns: 1fr 1fr; }
+  .chapter-nav-btn:nth-child(2) { grid-column: 1 / -1; order: -1; }
   .page { padding: 1.5rem 1rem 2rem; }
   .site-footer { padding: 0 1rem 1.5rem; }
   .site-footer .meta-row {

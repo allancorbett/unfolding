@@ -1,11 +1,23 @@
 import { useState, useEffect, useCallback } from "react";
 import StoryIndex from "./components/StoryIndex.jsx";
 import StoryView from "./components/StoryView.jsx";
+import BookView from "./components/BookView.jsx";
 import { getStoryById } from "./lib/stories.js";
+import { getBookById } from "./lib/books.js";
 
 function getRouteFromHash() {
   const hash = window.location.hash.replace(/^#\/?/, "");
-  return hash || null;
+  if (!hash) return { kind: "index" };
+  const parts = hash.split("/");
+  if (parts[0] === "book" && parts[1]) {
+    return { kind: "book", id: parts[1] };
+  }
+  return { kind: "story", id: parts[0] };
+}
+
+function routeKey(route) {
+  if (route.kind === "index") return "index";
+  return route.kind + ":" + route.id;
 }
 
 export default function App() {
@@ -22,8 +34,12 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [route]);
 
-  const navigateTo = useCallback((id) => {
+  const navigateToStory = useCallback((id) => {
     window.location.hash = id ? "/" + id : "/";
+  }, []);
+
+  const navigateToBook = useCallback((id) => {
+    window.location.hash = "/book/" + id;
   }, []);
 
   const navigateHome = useCallback(() => {
@@ -31,14 +47,33 @@ export default function App() {
   }, []);
 
   let view;
-  if (route) {
-    const story = getStoryById(route);
+  if (route.kind === "book") {
+    const book = getBookById(route.id);
+    if (book) {
+      view = (
+        <BookView
+          key={routeKey(route)}
+          book={book}
+          onBack={navigateHome}
+          onSelectChapter={navigateToStory}
+        />
+      );
+    }
+  } else if (route.kind === "story") {
+    const story = getStoryById(route.id);
     if (story) {
-      // Re-key on route so each story view gets a fresh state
-      view = <StoryView key={route} story={story} onBack={navigateHome} />;
+      view = (
+        <StoryView
+          key={routeKey(route)}
+          story={story}
+          onBack={navigateHome}
+          onNavigate={navigateToStory}
+          onNavigateBook={navigateToBook}
+        />
+      );
     }
   }
-  if (!view) view = <StoryIndex onSelect={navigateTo} />;
+  if (!view) view = <StoryIndex onSelectStory={navigateToStory} onSelectBook={navigateToBook} />;
 
   return (
     <>
