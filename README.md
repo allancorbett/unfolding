@@ -1,3 +1,14 @@
+> [!IMPORTANT]
+> **The Unfolding has moved to [superallan.com/unfolding](https://superallan.com/unfolding).**
+>
+> It now lives as a section of the superallan site, at
+> [allancorbett/superallan](https://github.com/allancorbett/superallan), where
+> the stories have real URLs and are server-rendered. This repository is kept
+> for its history; the app here is no longer deployed or developed.
+>
+> Old fragment links (`/#/tell-tale-heart`) still work — they redirect and are
+> translated to the new path.
+
 # The Unfolding
 
 A library of collapsible stories. Each story starts as a single line — fewer than ten words — and can be progressively unfolded into the full text by tapping bracketed phrases. Brutalist typewriter aesthetic.
