@@ -1,5 +1,12 @@
 # CLAUDE.md
 
+> [!IMPORTANT]
+> **Deprecated.** The Unfolding has moved into the superallan site at
+> [allancorbett/superallan](https://github.com/allancorbett/superallan), under
+> `src/routes/unfolding/` and `src/lib/unfolding/`. Work on stories there, not
+> here. The guidance below describes the retired React app and is kept only to
+> explain the history of this repository.
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Commands
